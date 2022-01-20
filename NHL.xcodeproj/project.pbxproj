@@ -1,0 +1,1675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20A6DE5BA7CD31913040CA5E /* Pods_NHLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196B491DAE62CA8495F9B0D8 /* Pods_NHLTests.framework */; };
+		3B086DFD849D3D420E760E2C /* Pods_NHL_NHLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED656AF27BA91BEFDCA794B2 /* Pods_NHL_NHLUITests.framework */; };
+		5A4C95C27110679B84EF924F /* Pods_NHL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FE5F95573E6C59E4E6AE33 /* Pods_NHL.framework */; };
+		FA02C5AC2786CA8C00A7FFEE /* DetailedTeamScreenModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02C5AB2786CA8C00A7FFEE /* DetailedTeamScreenModelProtocol.swift */; };
+		FA02C5AE2786D95800A7FFEE /* TeamScreenModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA02C5AD2786D95800A7FFEE /* TeamScreenModelProtocol.swift */; };
+		FA0BE50B27857C6800E1C0A8 /* AFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0BE50A27857C6800E1C0A8 /* AFService.swift */; };
+		FA0D970A278D91AC00EC9C02 /* DetailedPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9709278D91AC00EC9C02 /* DetailedPlayerPresenter.swift */; };
+		FA0D970C278D924E00EC9C02 /* DetailedPlayerPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D970B278D924E00EC9C02 /* DetailedPlayerPresenterInputDelegate.swift */; };
+		FA0D970E278D928600EC9C02 /* DetailedPlayerPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D970D278D928600EC9C02 /* DetailedPlayerPresenterOutputDelegate.swift */; };
+		FA0D9710278D9C2B00EC9C02 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D970F278D9C2B00EC9C02 /* AppCell.swift */; };
+		FA0D9712278DB42D00EC9C02 /* LoadableGameIDAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9711278DB42D00EC9C02 /* LoadableGameIDAlertController.swift */; };
+		FA0D9716278DCAE400EC9C02 /* GamePresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9715278DCAE400EC9C02 /* GamePresenterInputDelegate.swift */; };
+		FA0D9718278DCB5000EC9C02 /* GamePresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9717278DCB5000EC9C02 /* GamePresenterOutputDelegate.swift */; };
+		FA0D971A278DCC1300EC9C02 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9719278DCC1300EC9C02 /* GamePresenter.swift */; };
+		FA0D971D278DD07800EC9C02 /* GameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D971C278DD07800EC9C02 /* GameDTO.swift */; };
+		FA15BCB12782F5D3009AD3D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */; };
+		FA2240322796D8D500988873 /* GameViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240312796D8D500988873 /* GameViewController+Extension.swift */; };
+		FA2240392796F13800988873 /* PlayerImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240382796F13800988873 /* PlayerImageViewController.swift */; };
+		FA22403B2796F2B200988873 /* PlayerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22403A2796F2B200988873 /* PlayerImageView.swift */; };
+		FA22403D2796F43300988873 /* LoadableInfoAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22403C2796F43300988873 /* LoadableInfoAlertController.swift */; };
+		FA2240412796FACE00988873 /* PlayerImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240402796FACE00988873 /* PlayerImagePresenter.swift */; };
+		FA2240432796FB1700988873 /* PlayerImagePresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240422796FB1700988873 /* PlayerImagePresenterInputDelegate.swift */; };
+		FA2240452796FB2500988873 /* PlayerImagePresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240442796FB2500988873 /* PlayerImagePresenterOutputDelegate.swift */; };
+		FA52C8EF2785FEAB0054F92D /* AFDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C8EE2785FEAB0054F92D /* AFDataFetcherService.swift */; };
+		FA52C8F1278605140054F92D /* AFNetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52C8F0278605140054F92D /* AFNetworkDataFetcher.swift */; };
+		FA6B97522791960D00912888 /* GameViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B97512791960D00912888 /* GameViewModelProtocol.swift */; };
+		FA6B97552791A30300912888 /* HostStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B97542791A30300912888 /* HostStatsCell.swift */; };
+		FA6B97572791ADF000912888 /* GuestStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B97562791ADF000912888 /* GuestStatsCell.swift */; };
+		FA6B97592791D49A00912888 /* HostStatsCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B97582791D49A00912888 /* HostStatsCellModelProtocol.swift */; };
+		FA6B975B2791D78A00912888 /* GuestStatsCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B975A2791D78A00912888 /* GuestStatsCellModelProtocol.swift */; };
+		FA75A7A827830517000FB307 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75A7A727830517000FB307 /* CustomTabBarView.swift */; };
+		FA75A7B02783196B000FB307 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75A7AF2783196B000FB307 /* GameViewController.swift */; };
+		FA75A7B22783199F000FB307 /* PlayersByTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75A7B12783199F000FB307 /* PlayersByTeamViewController.swift */; };
+		FA75A7B427832289000FB307 /* ScreenFactoryImpl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75A7B327832289000FB307 /* ScreenFactoryImpl+Extension.swift */; };
+		FA856618277D842C00FAD093 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856617277D842C00FAD093 /* Router.swift */; };
+		FA85661A277D855E00FAD093 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856619277D855E00FAD093 /* ScreenFactory.swift */; };
+		FA85661F277D8AF600FAD093 /* DetailedTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85661E277D8AF600FAD093 /* DetailedTeamViewController.swift */; };
+		FA856622277D8B6A00FAD093 /* DetailedTeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856621277D8B6A00FAD093 /* DetailedTeamPresenter.swift */; };
+		FA856626277DAE4200FAD093 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856625277DAE4200FAD093 /* MainCoordinator.swift */; };
+		FA856628277DBB6100FAD093 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856627277DBB6100FAD093 /* UIScrollView+Extension.swift */; };
+		FA90D40F2798227D00702F8A /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90D40E2798227D00702F8A /* RealmService.swift */; };
+		FAA0E755277EC8F700230863 /* TeamPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E754277EC8F700230863 /* TeamPresenterInputDelegate.swift */; };
+		FAA0E757277EC93700230863 /* TeamPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E756277EC93700230863 /* TeamPresenterOutputDelegate.swift */; };
+		FAA0E75A277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E759277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift */; };
+		FAA0E75C277EC9EF00230863 /* DetailedTeamPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E75B277EC9EF00230863 /* DetailedTeamPresenterOutputDelegate.swift */; };
+		FAA0E75E277EE17D00230863 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E75D277EE17D00230863 /* UIImageView+Extension.swift */; };
+		FAA60ED5278C339800E1FC54 /* PlayerRosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60ED4278C339800E1FC54 /* PlayerRosterViewController.swift */; };
+		FAA60ED7278C354700E1FC54 /* PlayerRosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60ED6278C354700E1FC54 /* PlayerRosterView.swift */; };
+		FAA60ED9278C3BBF00E1FC54 /* PlayerRosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60ED8278C3BBF00E1FC54 /* PlayerRosterCell.swift */; };
+		FAA60EDC278C490600E1FC54 /* PlayerRosterScreenModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EDB278C490600E1FC54 /* PlayerRosterScreenModelProtocol.swift */; };
+		FAA60EDE278C500A00E1FC54 /* PlayerRosterPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EDD278C500A00E1FC54 /* PlayerRosterPresenterInputDelegate.swift */; };
+		FAA60EE0278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EDF278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift */; };
+		FAA60EE3278C523500E1FC54 /* PlayerRosterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EE2278C523500E1FC54 /* PlayerRosterPresenter.swift */; };
+		FAA60EE9278C562400E1FC54 /* DetailedPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EE8278C562400E1FC54 /* DetailedPlayerViewController.swift */; };
+		FAA60EEB278C57C500E1FC54 /* DetailedPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EEA278C57C500E1FC54 /* DetailedPlayerView.swift */; };
+		FAA60EED278C57D800E1FC54 /* DetailedPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EEC278C57D800E1FC54 /* DetailedPlayerCell.swift */; };
+		FAA60EF0278C70A100E1FC54 /* PlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EEF278C70A100E1FC54 /* PlayerDTO.swift */; };
+		FAA60EF2278C7C9300E1FC54 /* DetailedPlayerScreenModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60EF1278C7C9200E1FC54 /* DetailedPlayerScreenModelProtocol.swift */; };
+		FAA8041E27870F23001F9E6B /* PlayersByTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8041D27870F23001F9E6B /* PlayersByTeamView.swift */; };
+		FAA804202787107C001F9E6B /* PlayersByTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8041F2787107C001F9E6B /* PlayersByTeamCell.swift */; };
+		FAA80423278711A0001F9E6B /* PlayersByTeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA80422278711A0001F9E6B /* PlayersByTeamPresenter.swift */; };
+		FAA804262787124D001F9E6B /* PlayersByTeamPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA804252787124D001F9E6B /* PlayersByTeamPresenterInputDelegate.swift */; };
+		FAA8042A278712BD001F9E6B /* PlayersByTeamPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA80429278712BD001F9E6B /* PlayersByTeamPresenterOutputDelegate.swift */; };
+		FAB2F874277C3616006ECC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F873277C3616006ECC1D /* AppDelegate.swift */; };
+		FAB2F876277C3616006ECC1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F875277C3616006ECC1D /* SceneDelegate.swift */; };
+		FAB2F878277C3616006ECC1D /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F877277C3616006ECC1D /* TeamViewController.swift */; };
+		FAB2F87E277C3616006ECC1D /* NHL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F87C277C3616006ECC1D /* NHL.xcdatamodeld */; };
+		FAB2F880277C3617006ECC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F87F277C3617006ECC1D /* Assets.xcassets */; };
+		FAB2F883277C3617006ECC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F881277C3617006ECC1D /* LaunchScreen.storyboard */; };
+		FAB2F88E277C3617006ECC1D /* NHLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F88D277C3617006ECC1D /* NHLTests.swift */; };
+		FAB2F898277C3617006ECC1D /* NHLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F897277C3617006ECC1D /* NHLUITests.swift */; };
+		FAB2F89A277C3617006ECC1D /* NHLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F899277C3617006ECC1D /* NHLUITestsLaunchTests.swift */; };
+		FAB2F8AE277C395F006ECC1D /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8AD277C395F006ECC1D /* TeamView.swift */; };
+		FAB2F8B1277C3A6F006ECC1D /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8B0277C3A6F006ECC1D /* ActivityIndicatorView.swift */; };
+		FAB2F8B4277C3B44006ECC1D /* RefreshControlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8B3277C3B44006ECC1D /* RefreshControlFactory.swift */; };
+		FAB2F8B6277C3C03006ECC1D /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8B5277C3C03006ECC1D /* TeamCell.swift */; };
+		FAB2F8B9277C402C006ECC1D /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8B8277C402C006ECC1D /* UIFont+Extension.swift */; };
+		FAB2F8BC277C40C8006ECC1D /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8BB277C40C8006ECC1D /* AppFont.swift */; };
+		FAB2F8BE277C4144006ECC1D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8BD277C4144006ECC1D /* UIView+Extension.swift */; };
+		FAB2F8C0277C4207006ECC1D /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8BF277C4207006ECC1D /* UITableView+Extension.swift */; };
+		FAB2F8C2277C435E006ECC1D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8C1277C435E006ECC1D /* UIViewController+Extension.swift */; };
+		FAB2F8C4277C466C006ECC1D /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8C3277C466C006ECC1D /* AppImage.swift */; };
+		FAB2F8C7277C4BDF006ECC1D /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8C6277C4BDF006ECC1D /* AppLabel.swift */; };
+		FAB2F8C9277C4C81006ECC1D /* NHLDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8C8277C4C81006ECC1D /* NHLDTO.swift */; };
+		FAB2F8CB277C4CE1006ECC1D /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8CA277C4CE1006ECC1D /* AppURL.swift */; };
+		FAB2F8D1277C4D93006ECC1D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8D0277C4D93006ECC1D /* AppError.swift */; };
+		FAB2F8D3277C4DDB006ECC1D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8D2277C4DDB006ECC1D /* String+Extension.swift */; };
+		FAB2F8D7277C4E38006ECC1D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAB2F8D9277C4E38006ECC1D /* Localizable.strings */; };
+		FAB2F8DE277C4EEB006ECC1D /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8DD277C4EEB006ECC1D /* InternetAvailabilityService.swift */; };
+		FAB2F8E2277C590B006ECC1D /* HeaderViewLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8E1277C590B006ECC1D /* HeaderViewLabelFactory.swift */; };
+		FAB2F8E4277C6059006ECC1D /* LoadableErrorAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8E3277C6059006ECC1D /* LoadableErrorAlertController+Extension.swift */; };
+		FAB2F8E7277C6B44006ECC1D /* TeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F8E6277C6B44006ECC1D /* TeamPresenter.swift */; };
+		FACBD66127843DB40015B65D /* DetailedTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBD66027843DB40015B65D /* DetailedTeamView.swift */; };
+		FACBD663278440310015B65D /* DetailedTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBD662278440310015B65D /* DetailedTeamCell.swift */; };
+		FACBD66527845CE20015B65D /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBD66427845CE20015B65D /* UITableViewCell+Extension.swift */; };
+		FACBD66A278489A30015B65D /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBD669278489A20015B65D /* NSMutableAttributedString+Extension.swift */; };
+		FADA95C627980CBB006F6FF6 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95C527980CBB006F6FF6 /* UIBarButtonItem+Extension.swift */; };
+		FADA95CC27980F2A006F6FF6 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95CB27980F2A006F6FF6 /* FavoritesViewController.swift */; };
+		FADA95CE27980F72006F6FF6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95CD27980F72006F6FF6 /* FavoritesView.swift */; };
+		FADA95D1279810AB006F6FF6 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95D0279810AB006F6FF6 /* Favorite.swift */; };
+		FADA95D32798116B006F6FF6 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95D22798116B006F6FF6 /* FavoritesCell.swift */; };
+		FADA95D5279811A7006F6FF6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA95D4279811A7006F6FF6 /* UICollectionView+Extension.swift */; };
+		FADB30AB2788779E0015EBC6 /* PlayersByTeamScreenModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB30AA2788779E0015EBC6 /* PlayersByTeamScreenModelProtocol.swift */; };
+		FAEA4A75278EBB7800D51FCD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA4A74278EBB7800D51FCD /* GameView.swift */; };
+		FAEA4A78278EF1A200D51FCD /* InsetsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA4A77278EF1A200D51FCD /* InsetsLabel.swift */; };
+		FAF5805D277C8253002EAB46 /* TeamViewPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5805C277C8253002EAB46 /* TeamViewPresenterTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAB2F88A277C3617006ECC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAB2F868277C3616006ECC1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB2F86F277C3616006ECC1D;
+			remoteInfo = NHL;
+		};
+		FAB2F894277C3617006ECC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAB2F868277C3616006ECC1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB2F86F277C3616006ECC1D;
+			remoteInfo = NHL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0418FE01B2A3F51265FE9AEA /* Pods-NHL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHL.debug.xcconfig"; path = "Target Support Files/Pods-NHL/Pods-NHL.debug.xcconfig"; sourceTree = "<group>"; };
+		196B491DAE62CA8495F9B0D8 /* Pods_NHLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D4CA0C034D9DDC80C20A2E7 /* Pods-NHLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHLTests.release.xcconfig"; path = "Target Support Files/Pods-NHLTests/Pods-NHLTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DD2A29C54EB78BC0BE261F7 /* Pods-NHL-NHLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHL-NHLUITests.release.xcconfig"; path = "Target Support Files/Pods-NHL-NHLUITests/Pods-NHL-NHLUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6C8CB8D0438A8780C29146E /* Pods-NHLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHLTests.debug.xcconfig"; path = "Target Support Files/Pods-NHLTests/Pods-NHLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4D98BFEDBCAFD72C967C176 /* Pods-NHL-NHLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHL-NHLUITests.debug.xcconfig"; path = "Target Support Files/Pods-NHL-NHLUITests/Pods-NHL-NHLUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2FE5F95573E6C59E4E6AE33 /* Pods_NHL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC66FF8F695DCF1FCCA8FF5 /* Pods-NHL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHL.release.xcconfig"; path = "Target Support Files/Pods-NHL/Pods-NHL.release.xcconfig"; sourceTree = "<group>"; };
+		ED656AF27BA91BEFDCA794B2 /* Pods_NHL_NHLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHL_NHLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA02C5AB2786CA8C00A7FFEE /* DetailedTeamScreenModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamScreenModelProtocol.swift; sourceTree = "<group>"; };
+		FA02C5AD2786D95800A7FFEE /* TeamScreenModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScreenModelProtocol.swift; sourceTree = "<group>"; };
+		FA0BE50A27857C6800E1C0A8 /* AFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFService.swift; sourceTree = "<group>"; };
+		FA0D9709278D91AC00EC9C02 /* DetailedPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerPresenter.swift; sourceTree = "<group>"; };
+		FA0D970B278D924E00EC9C02 /* DetailedPlayerPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FA0D970D278D928600EC9C02 /* DetailedPlayerPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerPresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FA0D970F278D9C2B00EC9C02 /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		FA0D9711278DB42D00EC9C02 /* LoadableGameIDAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableGameIDAlertController.swift; sourceTree = "<group>"; };
+		FA0D9715278DCAE400EC9C02 /* GamePresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FA0D9717278DCB5000EC9C02 /* GamePresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FA0D9719278DCC1300EC9C02 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		FA0D971C278DD07800EC9C02 /* GameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDTO.swift; sourceTree = "<group>"; };
+		FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FA2240312796D8D500988873 /* GameViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA2240382796F13800988873 /* PlayerImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageViewController.swift; sourceTree = "<group>"; };
+		FA22403A2796F2B200988873 /* PlayerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageView.swift; sourceTree = "<group>"; };
+		FA22403C2796F43300988873 /* LoadableInfoAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableInfoAlertController.swift; sourceTree = "<group>"; };
+		FA2240402796FACE00988873 /* PlayerImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImagePresenter.swift; sourceTree = "<group>"; };
+		FA2240422796FB1700988873 /* PlayerImagePresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImagePresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FA2240442796FB2500988873 /* PlayerImagePresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImagePresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FA52C8EE2785FEAB0054F92D /* AFDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFDataFetcherService.swift; sourceTree = "<group>"; };
+		FA52C8F0278605140054F92D /* AFNetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworkDataFetcher.swift; sourceTree = "<group>"; };
+		FA6B97512791960D00912888 /* GameViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelProtocol.swift; sourceTree = "<group>"; };
+		FA6B97542791A30300912888 /* HostStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsCell.swift; sourceTree = "<group>"; };
+		FA6B97562791ADF000912888 /* GuestStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestStatsCell.swift; sourceTree = "<group>"; };
+		FA6B97582791D49A00912888 /* HostStatsCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStatsCellModelProtocol.swift; sourceTree = "<group>"; };
+		FA6B975A2791D78A00912888 /* GuestStatsCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestStatsCellModelProtocol.swift; sourceTree = "<group>"; };
+		FA75A7A727830517000FB307 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		FA75A7AF2783196B000FB307 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		FA75A7B12783199F000FB307 /* PlayersByTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamViewController.swift; sourceTree = "<group>"; };
+		FA75A7B327832289000FB307 /* ScreenFactoryImpl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenFactoryImpl+Extension.swift"; sourceTree = "<group>"; };
+		FA856617277D842C00FAD093 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FA856619277D855E00FAD093 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		FA85661E277D8AF600FAD093 /* DetailedTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamViewController.swift; sourceTree = "<group>"; };
+		FA856621277D8B6A00FAD093 /* DetailedTeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamPresenter.swift; sourceTree = "<group>"; };
+		FA856625277DAE4200FAD093 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FA856627277DBB6100FAD093 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		FA90D40E2798227D00702F8A /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		FAA0E754277EC8F700230863 /* TeamPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FAA0E756277EC93700230863 /* TeamPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FAA0E759277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FAA0E75B277EC9EF00230863 /* DetailedTeamPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamPresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FAA0E75D277EE17D00230863 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FAA60ED4278C339800E1FC54 /* PlayerRosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterViewController.swift; sourceTree = "<group>"; };
+		FAA60ED6278C354700E1FC54 /* PlayerRosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterView.swift; sourceTree = "<group>"; };
+		FAA60ED8278C3BBF00E1FC54 /* PlayerRosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterCell.swift; sourceTree = "<group>"; };
+		FAA60EDB278C490600E1FC54 /* PlayerRosterScreenModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterScreenModelProtocol.swift; sourceTree = "<group>"; };
+		FAA60EDD278C500A00E1FC54 /* PlayerRosterPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FAA60EDF278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterPresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FAA60EE2278C523500E1FC54 /* PlayerRosterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRosterPresenter.swift; sourceTree = "<group>"; };
+		FAA60EE8278C562400E1FC54 /* DetailedPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerViewController.swift; sourceTree = "<group>"; };
+		FAA60EEA278C57C500E1FC54 /* DetailedPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerView.swift; sourceTree = "<group>"; };
+		FAA60EEC278C57D800E1FC54 /* DetailedPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerCell.swift; sourceTree = "<group>"; };
+		FAA60EEF278C70A100E1FC54 /* PlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDTO.swift; sourceTree = "<group>"; };
+		FAA60EF1278C7C9200E1FC54 /* DetailedPlayerScreenModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayerScreenModelProtocol.swift; sourceTree = "<group>"; };
+		FAA8041D27870F23001F9E6B /* PlayersByTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamView.swift; sourceTree = "<group>"; };
+		FAA8041F2787107C001F9E6B /* PlayersByTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamCell.swift; sourceTree = "<group>"; };
+		FAA80422278711A0001F9E6B /* PlayersByTeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamPresenter.swift; sourceTree = "<group>"; };
+		FAA804252787124D001F9E6B /* PlayersByTeamPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FAA80429278712BD001F9E6B /* PlayersByTeamPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamPresenterOutputDelegate.swift; sourceTree = "<group>"; };
+		FAB2F870277C3616006ECC1D /* NHL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB2F873277C3616006ECC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAB2F875277C3616006ECC1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAB2F877277C3616006ECC1D /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		FAB2F87D277C3616006ECC1D /* NHL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NHL.xcdatamodel; sourceTree = "<group>"; };
+		FAB2F87F277C3617006ECC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB2F882277C3617006ECC1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAB2F884277C3617006ECC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB2F889277C3617006ECC1D /* NHLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NHLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB2F88D277C3617006ECC1D /* NHLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLTests.swift; sourceTree = "<group>"; };
+		FAB2F893277C3617006ECC1D /* NHLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NHLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB2F897277C3617006ECC1D /* NHLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLUITests.swift; sourceTree = "<group>"; };
+		FAB2F899277C3617006ECC1D /* NHLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAB2F8AD277C395F006ECC1D /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		FAB2F8B0277C3A6F006ECC1D /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		FAB2F8B3277C3B44006ECC1D /* RefreshControlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlFactory.swift; sourceTree = "<group>"; };
+		FAB2F8B5277C3C03006ECC1D /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		FAB2F8B8277C402C006ECC1D /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8BB277C40C8006ECC1D /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		FAB2F8BD277C4144006ECC1D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8BF277C4207006ECC1D /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8C1277C435E006ECC1D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8C3277C466C006ECC1D /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		FAB2F8C6277C4BDF006ECC1D /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		FAB2F8C8277C4C81006ECC1D /* NHLDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLDTO.swift; sourceTree = "<group>"; };
+		FAB2F8CA277C4CE1006ECC1D /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
+		FAB2F8D0277C4D93006ECC1D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FAB2F8D2277C4DDB006ECC1D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8D8277C4E38006ECC1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAB2F8DA277C4E47006ECC1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAB2F8DD277C4EEB006ECC1D /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
+		FAB2F8E1277C590B006ECC1D /* HeaderViewLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewLabelFactory.swift; sourceTree = "<group>"; };
+		FAB2F8E3277C6059006ECC1D /* LoadableErrorAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableErrorAlertController+Extension.swift"; sourceTree = "<group>"; };
+		FAB2F8E6277C6B44006ECC1D /* TeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenter.swift; sourceTree = "<group>"; };
+		FACBD66027843DB40015B65D /* DetailedTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamView.swift; sourceTree = "<group>"; };
+		FACBD662278440310015B65D /* DetailedTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamCell.swift; sourceTree = "<group>"; };
+		FACBD66427845CE20015B65D /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FACBD669278489A20015B65D /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		FADA95C527980CBB006F6FF6 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		FADA95CB27980F2A006F6FF6 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		FADA95CD27980F72006F6FF6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		FADA95D0279810AB006F6FF6 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		FADA95D22798116B006F6FF6 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
+		FADA95D4279811A7006F6FF6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		FADB30AA2788779E0015EBC6 /* PlayersByTeamScreenModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersByTeamScreenModelProtocol.swift; sourceTree = "<group>"; };
+		FAEA4A74278EBB7800D51FCD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		FAEA4A77278EF1A200D51FCD /* InsetsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsLabel.swift; sourceTree = "<group>"; };
+		FAF5805C277C8253002EAB46 /* TeamViewPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewPresenterTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB2F86D277C3616006ECC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4C95C27110679B84EF924F /* Pods_NHL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F886277C3617006ECC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20A6DE5BA7CD31913040CA5E /* Pods_NHLTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F890277C3617006ECC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B086DFD849D3D420E760E2C /* Pods_NHL_NHLUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F514D8575F6E58E3EA6705B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2FE5F95573E6C59E4E6AE33 /* Pods_NHL.framework */,
+				ED656AF27BA91BEFDCA794B2 /* Pods_NHL_NHLUITests.framework */,
+				196B491DAE62CA8495F9B0D8 /* Pods_NHLTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		518EF13F4AC9D8FB24A34070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0418FE01B2A3F51265FE9AEA /* Pods-NHL.debug.xcconfig */,
+				ECC66FF8F695DCF1FCCA8FF5 /* Pods-NHL.release.xcconfig */,
+				D4D98BFEDBCAFD72C967C176 /* Pods-NHL-NHLUITests.debug.xcconfig */,
+				4DD2A29C54EB78BC0BE261F7 /* Pods-NHL-NHLUITests.release.xcconfig */,
+				A6C8CB8D0438A8780C29146E /* Pods-NHLTests.debug.xcconfig */,
+				1D4CA0C034D9DDC80C20A2E7 /* Pods-NHLTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA0D9706278D90EB00EC9C02 /* AlamofireService */ = {
+			isa = PBXGroup;
+			children = (
+				FA0BE50A27857C6800E1C0A8 /* AFService.swift */,
+				FA52C8F0278605140054F92D /* AFNetworkDataFetcher.swift */,
+				FA52C8EE2785FEAB0054F92D /* AFDataFetcherService.swift */,
+			);
+			path = AlamofireService;
+			sourceTree = "<group>";
+		};
+		FA0D9707278D910900EC9C02 /* InternetAvailabilityService */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8DD277C4EEB006ECC1D /* InternetAvailabilityService.swift */,
+			);
+			path = InternetAvailabilityService;
+			sourceTree = "<group>";
+		};
+		FA0D9708278D915800EC9C02 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D9709278D91AC00EC9C02 /* DetailedPlayerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA0D9713278DCA6F00EC9C02 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D9719278DCC1300EC9C02 /* GamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA0D9714278DCA7D00EC9C02 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D9715278DCAE400EC9C02 /* GamePresenterInputDelegate.swift */,
+				FA0D9717278DCB5000EC9C02 /* GamePresenterOutputDelegate.swift */,
+				FA6B97512791960D00912888 /* GameViewModelProtocol.swift */,
+				FA6B97582791D49A00912888 /* HostStatsCellModelProtocol.swift */,
+				FA6B975A2791D78A00912888 /* GuestStatsCellModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA0D971B278DD06400EC9C02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D971C278DD07800EC9C02 /* GameDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA15BCAE2782F580009AD3D1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA15BCAF2782F59A009AD3D1 /* Controller */,
+				FA75A7A6278304F2000FB307 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FA15BCAF2782F59A009AD3D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA2240352796F09800988873 /* PlayerImageModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA2240362796F0C200988873 /* Controller */,
+				FA2240372796F0C800988873 /* View */,
+				FA22403E2796FAB000988873 /* Presenter */,
+				FA22403F2796FABA00988873 /* Protocols */,
+			);
+			path = PlayerImageModule;
+			sourceTree = "<group>";
+		};
+		FA2240362796F0C200988873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA2240382796F13800988873 /* PlayerImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA2240372796F0C800988873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA22403A2796F2B200988873 /* PlayerImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA22403E2796FAB000988873 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA2240402796FACE00988873 /* PlayerImagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA22403F2796FABA00988873 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA2240422796FB1700988873 /* PlayerImagePresenterInputDelegate.swift */,
+				FA2240442796FB2500988873 /* PlayerImagePresenterOutputDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA6B97532791A2D300912888 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B97542791A30300912888 /* HostStatsCell.swift */,
+				FA6B97562791ADF000912888 /* GuestStatsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA75A7A6278304F2000FB307 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA75A7A727830517000FB307 /* CustomTabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA75A7A927831917000FB307 /* GameModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA75A7AA27831921000FB307 /* Controller */,
+				FA75A7AB27831927000FB307 /* View */,
+				FA0D9713278DCA6F00EC9C02 /* Presenter */,
+				FA0D971B278DD06400EC9C02 /* Model */,
+				FA0D9714278DCA7D00EC9C02 /* Protocols */,
+			);
+			path = GameModule;
+			sourceTree = "<group>";
+		};
+		FA75A7AA27831921000FB307 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA75A7AF2783196B000FB307 /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA75A7AB27831927000FB307 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA4A74278EBB7800D51FCD /* GameView.swift */,
+				FA6B97532791A2D300912888 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA75A7AD27831944000FB307 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA75A7B12783199F000FB307 /* PlayersByTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA75A7AE27831949000FB307 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8041D27870F23001F9E6B /* PlayersByTeamView.swift */,
+				FAA8041F2787107C001F9E6B /* PlayersByTeamCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA856616277D841100FAD093 /*  AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FA856617277D842C00FAD093 /* Router.swift */,
+				FA856625277DAE4200FAD093 /* MainCoordinator.swift */,
+			);
+			path = " AppRouter";
+			sourceTree = "<group>";
+		};
+		FA85661B277D8A9700FAD093 /* DetailedTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA85661C277D8AAA00FAD093 /* Controller */,
+				FA85661D277D8AB000FAD093 /* View */,
+				FA856620277D8B4400FAD093 /* Presenter */,
+				FAA0E758277EC99F00230863 /* Protocols */,
+			);
+			path = DetailedTeamModule;
+			sourceTree = "<group>";
+		};
+		FA85661C277D8AAA00FAD093 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA85661E277D8AF600FAD093 /* DetailedTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA85661D277D8AB000FAD093 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FACBD66027843DB40015B65D /* DetailedTeamView.swift */,
+				FACBD662278440310015B65D /* DetailedTeamCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA856620277D8B4400FAD093 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA856621277D8B6A00FAD093 /* DetailedTeamPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA90D40D2798226A00702F8A /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA90D40E2798227D00702F8A /* RealmService.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		FAA0E753277EC8DF00230863 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAA0E754277EC8F700230863 /* TeamPresenterInputDelegate.swift */,
+				FAA0E756277EC93700230863 /* TeamPresenterOutputDelegate.swift */,
+				FA02C5AD2786D95800A7FFEE /* TeamScreenModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAA0E758277EC99F00230863 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAA0E759277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift */,
+				FAA0E75B277EC9EF00230863 /* DetailedTeamPresenterOutputDelegate.swift */,
+				FA02C5AB2786CA8C00A7FFEE /* DetailedTeamScreenModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAA60ED1278C32EA00E1FC54 /* PlayerRosterModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60ED2278C332400E1FC54 /* Controller */,
+				FAA60ED3278C332900E1FC54 /* View */,
+				FAA60EE1278C51FA00E1FC54 /* Presenter */,
+				FAA60EDA278C48E000E1FC54 /* Protocols */,
+			);
+			path = PlayerRosterModule;
+			sourceTree = "<group>";
+		};
+		FAA60ED2278C332400E1FC54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60ED4278C339800E1FC54 /* PlayerRosterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA60ED3278C332900E1FC54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60ED6278C354700E1FC54 /* PlayerRosterView.swift */,
+				FAA60ED8278C3BBF00E1FC54 /* PlayerRosterCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA60EDA278C48E000E1FC54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EDD278C500A00E1FC54 /* PlayerRosterPresenterInputDelegate.swift */,
+				FAA60EDF278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift */,
+				FAA60EDB278C490600E1FC54 /* PlayerRosterScreenModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAA60EE1278C51FA00E1FC54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EE2278C523500E1FC54 /* PlayerRosterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA60EE4278C55B900E1FC54 /* DetailedPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EE5278C55D600E1FC54 /* Controller */,
+				FAA60EE6278C55DC00E1FC54 /* View */,
+				FA0D9708278D915800EC9C02 /* Presenter */,
+				FAA60EEE278C701600E1FC54 /* Model */,
+				FAA60EE7278C55E800E1FC54 /* Protocols */,
+			);
+			path = DetailedPlayerModule;
+			sourceTree = "<group>";
+		};
+		FAA60EE5278C55D600E1FC54 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EE8278C562400E1FC54 /* DetailedPlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA60EE6278C55DC00E1FC54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EEA278C57C500E1FC54 /* DetailedPlayerView.swift */,
+				FAA60EEC278C57D800E1FC54 /* DetailedPlayerCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA60EE7278C55E800E1FC54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D970B278D924E00EC9C02 /* DetailedPlayerPresenterInputDelegate.swift */,
+				FA0D970D278D928600EC9C02 /* DetailedPlayerPresenterOutputDelegate.swift */,
+				FAA60EF1278C7C9200E1FC54 /* DetailedPlayerScreenModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAA60EEE278C701600E1FC54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA60EEF278C70A100E1FC54 /* PlayerDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAA8042127871186001F9E6B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA80422278711A0001F9E6B /* PlayersByTeamPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA8042427871224001F9E6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAA804252787124D001F9E6B /* PlayersByTeamPresenterInputDelegate.swift */,
+				FAA80429278712BD001F9E6B /* PlayersByTeamPresenterOutputDelegate.swift */,
+				FADB30AA2788779E0015EBC6 /* PlayersByTeamScreenModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAB2F867277C3616006ECC1D = {
+			isa = PBXGroup;
+			children = (
+				FAB2F872277C3616006ECC1D /* NHL */,
+				FAB2F88C277C3617006ECC1D /* NHLTests */,
+				FAB2F896277C3617006ECC1D /* NHLUITests */,
+				FAB2F871277C3616006ECC1D /* Products */,
+				518EF13F4AC9D8FB24A34070 /* Pods */,
+				1F514D8575F6E58E3EA6705B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB2F871277C3616006ECC1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F870277C3616006ECC1D /* NHL.app */,
+				FAB2F889277C3617006ECC1D /* NHLTests.xctest */,
+				FAB2F893277C3617006ECC1D /* NHLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB2F872277C3616006ECC1D /* NHL */ = {
+			isa = PBXGroup;
+			children = (
+				FA90D40D2798226A00702F8A /* RealmManager */,
+				FA856616277D841100FAD093 /*  AppRouter */,
+				FAB2F8CC277C4D3A006ECC1D /* NetworkManager */,
+				FAB2F8A6277C3635006ECC1D /* UIApplication */,
+				FAB2F8A8277C3666006ECC1D /* SupportingFiles */,
+				FAB2F8A7277C3654006ECC1D /* Presentation */,
+				FAB2F884277C3617006ECC1D /* Info.plist */,
+				FAB2F87C277C3616006ECC1D /* NHL.xcdatamodeld */,
+			);
+			path = NHL;
+			sourceTree = "<group>";
+		};
+		FAB2F88C277C3617006ECC1D /* NHLTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F88D277C3617006ECC1D /* NHLTests.swift */,
+				FAF5805C277C8253002EAB46 /* TeamViewPresenterTest.swift */,
+			);
+			path = NHLTests;
+			sourceTree = "<group>";
+		};
+		FAB2F896277C3617006ECC1D /* NHLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F897277C3617006ECC1D /* NHLUITests.swift */,
+				FAB2F899277C3617006ECC1D /* NHLUITestsLaunchTests.swift */,
+			);
+			path = NHLUITests;
+			sourceTree = "<group>";
+		};
+		FAB2F8A6277C3635006ECC1D /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F873277C3616006ECC1D /* AppDelegate.swift */,
+				FAB2F875277C3616006ECC1D /* SceneDelegate.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		FAB2F8A7277C3654006ECC1D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8A9277C3671006ECC1D /* LaunchScreen */,
+				FA15BCAE2782F580009AD3D1 /* TabBar */,
+				FAB2F8AA277C3692006ECC1D /* TeamModule */,
+				FA85661B277D8A9700FAD093 /* DetailedTeamModule */,
+				FA75A7A927831917000FB307 /* GameModule */,
+				FADB30A9278877090015EBC6 /* PlayersByTeamModule */,
+				FAA60ED1278C32EA00E1FC54 /* PlayerRosterModule */,
+				FAA60EE4278C55B900E1FC54 /* DetailedPlayerModule */,
+				FA2240352796F09800988873 /* PlayerImageModule */,
+				FADA95C727980EE6006F6FF6 /* FavoritesModule */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FAB2F8A8277C3666006ECC1D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA4A76278EF19100D51FCD /* Views */,
+				FAB2F8D4277C4DFE006ECC1D /* Localization */,
+				FAB2F8BA277C40BB006ECC1D /* Constants */,
+				FAB2F8B7277C4017006ECC1D /* Extensions */,
+				FAB2F8B2277C3B2F006ECC1D /* Factory */,
+				FAB2F87F277C3617006ECC1D /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FAB2F8A9277C3671006ECC1D /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F881277C3617006ECC1D /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FAB2F8AA277C3692006ECC1D /* TeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8AB277C369F006ECC1D /* Controller */,
+				FAB2F8AC277C36A7006ECC1D /* View */,
+				FAB2F8E5277C6B20006ECC1D /* Presenter */,
+				FAB2F8C5277C4BA2006ECC1D /* Model */,
+				FAA0E753277EC8DF00230863 /* Protocols */,
+			);
+			path = TeamModule;
+			sourceTree = "<group>";
+		};
+		FAB2F8AB277C369F006ECC1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F877277C3616006ECC1D /* TeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAB2F8AC277C36A7006ECC1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8AD277C395F006ECC1D /* TeamView.swift */,
+				FAB2F8B5277C3C03006ECC1D /* TeamCell.swift */,
+				FAB2F8AF277C3A4C006ECC1D /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB2F8AF277C3A4C006ECC1D /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8B0277C3A6F006ECC1D /* ActivityIndicatorView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		FAB2F8B2277C3B2F006ECC1D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8B3277C3B44006ECC1D /* RefreshControlFactory.swift */,
+				FAB2F8E1277C590B006ECC1D /* HeaderViewLabelFactory.swift */,
+				FA856619277D855E00FAD093 /* ScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		FAB2F8B7277C4017006ECC1D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8BF277C4207006ECC1D /* UITableView+Extension.swift */,
+				FAB2F8B8277C402C006ECC1D /* UIFont+Extension.swift */,
+				FAB2F8BD277C4144006ECC1D /* UIView+Extension.swift */,
+				FAB2F8C1277C435E006ECC1D /* UIViewController+Extension.swift */,
+				FAB2F8D2277C4DDB006ECC1D /* String+Extension.swift */,
+				FA856627277DBB6100FAD093 /* UIScrollView+Extension.swift */,
+				FAA0E75D277EE17D00230863 /* UIImageView+Extension.swift */,
+				FA75A7B327832289000FB307 /* ScreenFactoryImpl+Extension.swift */,
+				FACBD66427845CE20015B65D /* UITableViewCell+Extension.swift */,
+				FACBD669278489A20015B65D /* NSMutableAttributedString+Extension.swift */,
+				FA0D9711278DB42D00EC9C02 /* LoadableGameIDAlertController.swift */,
+				FAB2F8E3277C6059006ECC1D /* LoadableErrorAlertController+Extension.swift */,
+				FA22403C2796F43300988873 /* LoadableInfoAlertController.swift */,
+				FA2240312796D8D500988873 /* GameViewController+Extension.swift */,
+				FADA95C527980CBB006F6FF6 /* UIBarButtonItem+Extension.swift */,
+				FADA95D4279811A7006F6FF6 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAB2F8BA277C40BB006ECC1D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8BB277C40C8006ECC1D /* AppFont.swift */,
+				FAB2F8C3277C466C006ECC1D /* AppImage.swift */,
+				FAB2F8C6277C4BDF006ECC1D /* AppLabel.swift */,
+				FAB2F8CA277C4CE1006ECC1D /* AppURL.swift */,
+				FAB2F8D0277C4D93006ECC1D /* AppError.swift */,
+				FA0D970F278D9C2B00EC9C02 /* AppCell.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FAB2F8C5277C4BA2006ECC1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8C8277C4C81006ECC1D /* NHLDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB2F8CC277C4D3A006ECC1D /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D9706278D90EB00EC9C02 /* AlamofireService */,
+				FA0D9707278D910900EC9C02 /* InternetAvailabilityService */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		FAB2F8D4277C4DFE006ECC1D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8D9277C4E38006ECC1D /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		FAB2F8E5277C6B20006ECC1D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F8E6277C6B44006ECC1D /* TeamPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FADA95C727980EE6006F6FF6 /* FavoritesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FADA95C927980F0C006F6FF6 /* Controller */,
+				FADA95C827980F06006F6FF6 /* View */,
+				FADA95CA27980F15006F6FF6 /* Presenter */,
+				FADA95CF2798109E006F6FF6 /* Model */,
+			);
+			path = FavoritesModule;
+			sourceTree = "<group>";
+		};
+		FADA95C827980F06006F6FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FADA95CD27980F72006F6FF6 /* FavoritesView.swift */,
+				FADA95D22798116B006F6FF6 /* FavoritesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FADA95C927980F0C006F6FF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FADA95CB27980F2A006F6FF6 /* FavoritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FADA95CA27980F15006F6FF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FADA95CF2798109E006F6FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FADA95D0279810AB006F6FF6 /* Favorite.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FADB30A9278877090015EBC6 /* PlayersByTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA75A7AD27831944000FB307 /* Controller */,
+				FA75A7AE27831949000FB307 /* View */,
+				FAA8042127871186001F9E6B /* Presenter */,
+				FAA8042427871224001F9E6B /* Protocols */,
+			);
+			path = PlayersByTeamModule;
+			sourceTree = "<group>";
+		};
+		FAEA4A76278EF19100D51FCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA4A77278EF1A200D51FCD /* InsetsLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB2F86F277C3616006ECC1D /* NHL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB2F89D277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHL" */;
+			buildPhases = (
+				D5F212DAA99E5B61F837CE14 /* [CP] Check Pods Manifest.lock */,
+				FAB2F86C277C3616006ECC1D /* Sources */,
+				FAB2F86D277C3616006ECC1D /* Frameworks */,
+				FAB2F86E277C3616006ECC1D /* Resources */,
+				38B1D95C82028E801F96DEE4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NHL;
+			productName = NHL;
+			productReference = FAB2F870277C3616006ECC1D /* NHL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAB2F888277C3617006ECC1D /* NHLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB2F8A0277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHLTests" */;
+			buildPhases = (
+				4BD075F7BC897E836E6F49EA /* [CP] Check Pods Manifest.lock */,
+				FAB2F885277C3617006ECC1D /* Sources */,
+				FAB2F886277C3617006ECC1D /* Frameworks */,
+				FAB2F887277C3617006ECC1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB2F88B277C3617006ECC1D /* PBXTargetDependency */,
+			);
+			name = NHLTests;
+			productName = NHLTests;
+			productReference = FAB2F889277C3617006ECC1D /* NHLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAB2F892277C3617006ECC1D /* NHLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB2F8A3277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHLUITests" */;
+			buildPhases = (
+				D1D2B7E7B4359204DB8BB476 /* [CP] Check Pods Manifest.lock */,
+				FAB2F88F277C3617006ECC1D /* Sources */,
+				FAB2F890277C3617006ECC1D /* Frameworks */,
+				FAB2F891277C3617006ECC1D /* Resources */,
+				5304A8613EE893D739DE15A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB2F895277C3617006ECC1D /* PBXTargetDependency */,
+			);
+			name = NHLUITests;
+			productName = NHLUITests;
+			productReference = FAB2F893277C3617006ECC1D /* NHLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB2F868277C3616006ECC1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					FAB2F86F277C3616006ECC1D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAB2F888277C3617006ECC1D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = FAB2F86F277C3616006ECC1D;
+					};
+					FAB2F892277C3617006ECC1D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = FAB2F86F277C3616006ECC1D;
+					};
+				};
+			};
+			buildConfigurationList = FAB2F86B277C3616006ECC1D /* Build configuration list for PBXProject "NHL" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = FAB2F867277C3616006ECC1D;
+			productRefGroup = FAB2F871277C3616006ECC1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAB2F86F277C3616006ECC1D /* NHL */,
+				FAB2F888277C3617006ECC1D /* NHLTests */,
+				FAB2F892277C3617006ECC1D /* NHLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB2F86E277C3616006ECC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB2F883277C3617006ECC1D /* LaunchScreen.storyboard in Resources */,
+				FAB2F8D7277C4E38006ECC1D /* Localizable.strings in Resources */,
+				FAB2F880277C3617006ECC1D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F887277C3617006ECC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F891277C3617006ECC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38B1D95C82028E801F96DEE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHL/Pods-NHL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHL/Pods-NHL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NHL/Pods-NHL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BD075F7BC897E836E6F49EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NHLTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5304A8613EE893D739DE15A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHL-NHLUITests/Pods-NHL-NHLUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHL-NHLUITests/Pods-NHL-NHLUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NHL-NHLUITests/Pods-NHL-NHLUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D2B7E7B4359204DB8BB476 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NHL-NHLUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F212DAA99E5B61F837CE14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NHL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB2F86C277C3616006ECC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0D9716278DCAE400EC9C02 /* GamePresenterInputDelegate.swift in Sources */,
+				FACBD66127843DB40015B65D /* DetailedTeamView.swift in Sources */,
+				FA6B97592791D49A00912888 /* HostStatsCellModelProtocol.swift in Sources */,
+				FA85661F277D8AF600FAD093 /* DetailedTeamViewController.swift in Sources */,
+				FA75A7B427832289000FB307 /* ScreenFactoryImpl+Extension.swift in Sources */,
+				FA2240412796FACE00988873 /* PlayerImagePresenter.swift in Sources */,
+				FAA60EEB278C57C500E1FC54 /* DetailedPlayerView.swift in Sources */,
+				FAB2F8C9277C4C81006ECC1D /* NHLDTO.swift in Sources */,
+				FA6B97572791ADF000912888 /* GuestStatsCell.swift in Sources */,
+				FA0D970A278D91AC00EC9C02 /* DetailedPlayerPresenter.swift in Sources */,
+				FAB2F8E2277C590B006ECC1D /* HeaderViewLabelFactory.swift in Sources */,
+				FA6B975B2791D78A00912888 /* GuestStatsCellModelProtocol.swift in Sources */,
+				FAB2F8BE277C4144006ECC1D /* UIView+Extension.swift in Sources */,
+				FA856618277D842C00FAD093 /* Router.swift in Sources */,
+				FA856628277DBB6100FAD093 /* UIScrollView+Extension.swift in Sources */,
+				FAEA4A78278EF1A200D51FCD /* InsetsLabel.swift in Sources */,
+				FADA95D5279811A7006F6FF6 /* UICollectionView+Extension.swift in Sources */,
+				FAA0E75E277EE17D00230863 /* UIImageView+Extension.swift in Sources */,
+				FADA95D32798116B006F6FF6 /* FavoritesCell.swift in Sources */,
+				FA0D970E278D928600EC9C02 /* DetailedPlayerPresenterOutputDelegate.swift in Sources */,
+				FAB2F8D1277C4D93006ECC1D /* AppError.swift in Sources */,
+				FAA60ED5278C339800E1FC54 /* PlayerRosterViewController.swift in Sources */,
+				FAA0E757277EC93700230863 /* TeamPresenterOutputDelegate.swift in Sources */,
+				FA22403B2796F2B200988873 /* PlayerImageView.swift in Sources */,
+				FA0D9710278D9C2B00EC9C02 /* AppCell.swift in Sources */,
+				FA2240392796F13800988873 /* PlayerImageViewController.swift in Sources */,
+				FAB2F8C2277C435E006ECC1D /* UIViewController+Extension.swift in Sources */,
+				FA22403D2796F43300988873 /* LoadableInfoAlertController.swift in Sources */,
+				FAB2F8B6277C3C03006ECC1D /* TeamCell.swift in Sources */,
+				FA75A7B22783199F000FB307 /* PlayersByTeamViewController.swift in Sources */,
+				FA02C5AC2786CA8C00A7FFEE /* DetailedTeamScreenModelProtocol.swift in Sources */,
+				FACBD663278440310015B65D /* DetailedTeamCell.swift in Sources */,
+				FA0D9718278DCB5000EC9C02 /* GamePresenterOutputDelegate.swift in Sources */,
+				FA15BCB12782F5D3009AD3D1 /* TabBarController.swift in Sources */,
+				FAB2F878277C3616006ECC1D /* TeamViewController.swift in Sources */,
+				FA0BE50B27857C6800E1C0A8 /* AFService.swift in Sources */,
+				FAB2F874277C3616006ECC1D /* AppDelegate.swift in Sources */,
+				FAB2F8D3277C4DDB006ECC1D /* String+Extension.swift in Sources */,
+				FAA60EDC278C490600E1FC54 /* PlayerRosterScreenModelProtocol.swift in Sources */,
+				FA0D970C278D924E00EC9C02 /* DetailedPlayerPresenterInputDelegate.swift in Sources */,
+				FAA60EE3278C523500E1FC54 /* PlayerRosterPresenter.swift in Sources */,
+				FAB2F8AE277C395F006ECC1D /* TeamView.swift in Sources */,
+				FAB2F8B4277C3B44006ECC1D /* RefreshControlFactory.swift in Sources */,
+				FAA60EED278C57D800E1FC54 /* DetailedPlayerCell.swift in Sources */,
+				FA75A7A827830517000FB307 /* CustomTabBarView.swift in Sources */,
+				FAA80423278711A0001F9E6B /* PlayersByTeamPresenter.swift in Sources */,
+				FAB2F8C4277C466C006ECC1D /* AppImage.swift in Sources */,
+				FA2240432796FB1700988873 /* PlayerImagePresenterInputDelegate.swift in Sources */,
+				FA856626277DAE4200FAD093 /* MainCoordinator.swift in Sources */,
+				FAA60EF2278C7C9300E1FC54 /* DetailedPlayerScreenModelProtocol.swift in Sources */,
+				FA6B97522791960D00912888 /* GameViewModelProtocol.swift in Sources */,
+				FAA60EE9278C562400E1FC54 /* DetailedPlayerViewController.swift in Sources */,
+				FA02C5AE2786D95800A7FFEE /* TeamScreenModelProtocol.swift in Sources */,
+				FAB2F8B1277C3A6F006ECC1D /* ActivityIndicatorView.swift in Sources */,
+				FADA95C627980CBB006F6FF6 /* UIBarButtonItem+Extension.swift in Sources */,
+				FAA0E755277EC8F700230863 /* TeamPresenterInputDelegate.swift in Sources */,
+				FAB2F8E7277C6B44006ECC1D /* TeamPresenter.swift in Sources */,
+				FAA60EE0278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift in Sources */,
+				FACBD66527845CE20015B65D /* UITableViewCell+Extension.swift in Sources */,
+				FA75A7B02783196B000FB307 /* GameViewController.swift in Sources */,
+				FAB2F8BC277C40C8006ECC1D /* AppFont.swift in Sources */,
+				FAA0E75A277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift in Sources */,
+				FAA60ED7278C354700E1FC54 /* PlayerRosterView.swift in Sources */,
+				FAB2F8CB277C4CE1006ECC1D /* AppURL.swift in Sources */,
+				FA52C8F1278605140054F92D /* AFNetworkDataFetcher.swift in Sources */,
+				FAB2F8C7277C4BDF006ECC1D /* AppLabel.swift in Sources */,
+				FAA60EDE278C500A00E1FC54 /* PlayerRosterPresenterInputDelegate.swift in Sources */,
+				FADA95CC27980F2A006F6FF6 /* FavoritesViewController.swift in Sources */,
+				FACBD66A278489A30015B65D /* NSMutableAttributedString+Extension.swift in Sources */,
+				FADB30AB2788779E0015EBC6 /* PlayersByTeamScreenModelProtocol.swift in Sources */,
+				FA85661A277D855E00FAD093 /* ScreenFactory.swift in Sources */,
+				FAB2F8DE277C4EEB006ECC1D /* InternetAvailabilityService.swift in Sources */,
+				FA2240322796D8D500988873 /* GameViewController+Extension.swift in Sources */,
+				FAA8041E27870F23001F9E6B /* PlayersByTeamView.swift in Sources */,
+				FA856622277D8B6A00FAD093 /* DetailedTeamPresenter.swift in Sources */,
+				FA0D971A278DCC1300EC9C02 /* GamePresenter.swift in Sources */,
+				FAA60ED9278C3BBF00E1FC54 /* PlayerRosterCell.swift in Sources */,
+				FA2240452796FB2500988873 /* PlayerImagePresenterOutputDelegate.swift in Sources */,
+				FA0D971D278DD07800EC9C02 /* GameDTO.swift in Sources */,
+				FA90D40F2798227D00702F8A /* RealmService.swift in Sources */,
+				FAB2F8B9277C402C006ECC1D /* UIFont+Extension.swift in Sources */,
+				FAA804262787124D001F9E6B /* PlayersByTeamPresenterInputDelegate.swift in Sources */,
+				FAB2F87E277C3616006ECC1D /* NHL.xcdatamodeld in Sources */,
+				FADA95CE27980F72006F6FF6 /* FavoritesView.swift in Sources */,
+				FADA95D1279810AB006F6FF6 /* Favorite.swift in Sources */,
+				FAA804202787107C001F9E6B /* PlayersByTeamCell.swift in Sources */,
+				FAB2F876277C3616006ECC1D /* SceneDelegate.swift in Sources */,
+				FA6B97552791A30300912888 /* HostStatsCell.swift in Sources */,
+				FA0D9712278DB42D00EC9C02 /* LoadableGameIDAlertController.swift in Sources */,
+				FAA60EF0278C70A100E1FC54 /* PlayerDTO.swift in Sources */,
+				FAEA4A75278EBB7800D51FCD /* GameView.swift in Sources */,
+				FAA8042A278712BD001F9E6B /* PlayersByTeamPresenterOutputDelegate.swift in Sources */,
+				FAB2F8E4277C6059006ECC1D /* LoadableErrorAlertController+Extension.swift in Sources */,
+				FAB2F8C0277C4207006ECC1D /* UITableView+Extension.swift in Sources */,
+				FA52C8EF2785FEAB0054F92D /* AFDataFetcherService.swift in Sources */,
+				FAA0E75C277EC9EF00230863 /* DetailedTeamPresenterOutputDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F885277C3617006ECC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF5805D277C8253002EAB46 /* TeamViewPresenterTest.swift in Sources */,
+				FAB2F88E277C3617006ECC1D /* NHLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB2F88F277C3617006ECC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB2F898277C3617006ECC1D /* NHLUITests.swift in Sources */,
+				FAB2F89A277C3617006ECC1D /* NHLUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAB2F88B277C3617006ECC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB2F86F277C3616006ECC1D /* NHL */;
+			targetProxy = FAB2F88A277C3617006ECC1D /* PBXContainerItemProxy */;
+		};
+		FAB2F895277C3617006ECC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB2F86F277C3616006ECC1D /* NHL */;
+			targetProxy = FAB2F894277C3617006ECC1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAB2F881277C3617006ECC1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB2F882277C3617006ECC1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAB2F8D9277C4E38006ECC1D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB2F8D8277C4E38006ECC1D /* en */,
+				FAB2F8DA277C4E47006ECC1D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAB2F89B277C3617006ECC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB2F89C277C3617006ECC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAB2F89E277C3618006ECC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0418FE01B2A3F51265FE9AEA /* Pods-NHL.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NHL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NHL;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FAB2F89F277C3618006ECC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC66FF8F695DCF1FCCA8FF5 /* Pods-NHL.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NHL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NHL;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FAB2F8A1277C3618006ECC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C8CB8D0438A8780C29146E /* Pods-NHLTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NHL.app/NHL";
+			};
+			name = Debug;
+		};
+		FAB2F8A2277C3618006ECC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4CA0C034D9DDC80C20A2E7 /* Pods-NHLTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NHL.app/NHL";
+			};
+			name = Release;
+		};
+		FAB2F8A4277C3618006ECC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D98BFEDBCAFD72C967C176 /* Pods-NHL-NHLUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NHL;
+			};
+			name = Debug;
+		};
+		FAB2F8A5277C3618006ECC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD2A29C54EB78BC0BE261F7 /* Pods-NHL-NHLUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.NHLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NHL;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB2F86B277C3616006ECC1D /* Build configuration list for PBXProject "NHL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB2F89B277C3617006ECC1D /* Debug */,
+				FAB2F89C277C3617006ECC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB2F89D277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB2F89E277C3618006ECC1D /* Debug */,
+				FAB2F89F277C3618006ECC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB2F8A0277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB2F8A1277C3618006ECC1D /* Debug */,
+				FAB2F8A2277C3618006ECC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB2F8A3277C3618006ECC1D /* Build configuration list for PBXNativeTarget "NHLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB2F8A4277C3618006ECC1D /* Debug */,
+				FAB2F8A5277C3618006ECC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAB2F87C277C3616006ECC1D /* NHL.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAB2F87D277C3616006ECC1D /* NHL.xcdatamodel */,
+			);
+			currentVersion = FAB2F87D277C3616006ECC1D /* NHL.xcdatamodel */;
+			path = NHL.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAB2F868277C3616006ECC1D /* Project object */;
+}
