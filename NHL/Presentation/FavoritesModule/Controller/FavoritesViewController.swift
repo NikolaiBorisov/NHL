@@ -10,6 +10,10 @@ import RealmSwift
 
 /// Class displays a collection of saved player's images
 final class FavoritesViewController: UIViewController {
+    
+    // MARK: - Public Properties
+    
+    public var presenter: FavoritesPresenterOutputDelegate?
 
     // MARK: - Private Properties
     
@@ -29,7 +33,8 @@ final class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getDataFromRealm()
+        setupPresenter()
+        getDataHandler()
         setupView()
         setupNavBar()
     }
@@ -47,8 +52,12 @@ final class FavoritesViewController: UIViewController {
     
     // MARK: - Private Methods
     
-    private func getDataFromRealm() {
-        favorites = realm.get(Favorite.self)
+    private func setupPresenter() {
+        presenter = FavoritesPresenter(delegate: self)
+    }
+    
+    private func getDataHandler() {
+        presenter?.getData()
     }
     
     private func setupNavBar() {
@@ -116,5 +125,13 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.scrollIndicators.vertical?.backgroundColor = .systemRed
     }
+    
+}
+
+// MARK: - FavoritesPresenterInputDelegate
+
+extension FavoritesViewController: FavoritesPresenterInputDelegate {
+    
+    func fetchDataFromRealm() { favorites = realm.get(Favorite.self) }
     
 }

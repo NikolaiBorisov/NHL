@@ -54,8 +54,7 @@ final class TabBarController: UITabBarController {
         setupDelegate()
         setupLayout()
         setupView()
-        // Wrong behaviour. Fix me!
-        tabBar.scrollEdgeAppearance = .none
+        setupTabBarScrollAppearance()
     }
     
     // MARK: - Private Methods
@@ -77,6 +76,17 @@ final class TabBarController: UITabBarController {
         let teamVC = coordinator.navigationController
         let playerVC = screenFactory.createPlayerByTeamScreen(coordinator: coordinator)
         viewControllers = [gameVC, teamVC, playerVC]
+    }
+    
+    private func setupTabBarScrollAppearance() {
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            
+            self.tabBar.standardAppearance = appearance
+            self.tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+        }
     }
     
     private func addSubviews() {

@@ -14,8 +14,6 @@ final class PlayerImagePresenter {
     
     public var delegate: PlayerImagePresenterInputDelegate?
     
-    // MARK: - Private Properties
-    
     // MARK: - Initializers
     
     init(delegate: PlayerImagePresenterInputDelegate) {

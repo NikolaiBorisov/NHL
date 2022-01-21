@@ -23,6 +23,9 @@
 		FA0D971A278DCC1300EC9C02 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D9719278DCC1300EC9C02 /* GamePresenter.swift */; };
 		FA0D971D278DD07800EC9C02 /* GameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D971C278DD07800EC9C02 /* GameDTO.swift */; };
 		FA15BCB12782F5D3009AD3D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */; };
+		FA205DB7279AC4D1009304FA /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA205DB6279AC4D1009304FA /* FavoritesPresenter.swift */; };
+		FA205DBA279AC520009304FA /* FavoritesPresenterInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA205DB9279AC520009304FA /* FavoritesPresenterInputDelegate.swift */; };
+		FA205DBC279AC541009304FA /* FavoritesPresenterOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA205DBB279AC541009304FA /* FavoritesPresenterOutputDelegate.swift */; };
 		FA2240322796D8D500988873 /* GameViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240312796D8D500988873 /* GameViewController+Extension.swift */; };
 		FA2240392796F13800988873 /* PlayerImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2240382796F13800988873 /* PlayerImageViewController.swift */; };
 		FA22403B2796F2B200988873 /* PlayerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22403A2796F2B200988873 /* PlayerImageView.swift */; };
@@ -155,6 +158,9 @@
 		FA0D9719278DCC1300EC9C02 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		FA0D971C278DD07800EC9C02 /* GameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDTO.swift; sourceTree = "<group>"; };
 		FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FA205DB6279AC4D1009304FA /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		FA205DB9279AC520009304FA /* FavoritesPresenterInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenterInputDelegate.swift; sourceTree = "<group>"; };
+		FA205DBB279AC541009304FA /* FavoritesPresenterOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenterOutputDelegate.swift; sourceTree = "<group>"; };
 		FA2240312796D8D500988873 /* GameViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA2240382796F13800988873 /* PlayerImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageViewController.swift; sourceTree = "<group>"; };
 		FA22403A2796F2B200988873 /* PlayerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImageView.swift; sourceTree = "<group>"; };
@@ -372,6 +378,15 @@
 				FA15BCB02782F5D3009AD3D1 /* TabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA205DB8279AC4F9009304FA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA205DB9279AC520009304FA /* FavoritesPresenterInputDelegate.swift */,
+				FA205DBB279AC541009304FA /* FavoritesPresenterOutputDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FA2240352796F09800988873 /* PlayerImageModule */ = {
@@ -891,6 +906,7 @@
 				FADA95C827980F06006F6FF6 /* View */,
 				FADA95CA27980F15006F6FF6 /* Presenter */,
 				FADA95CF2798109E006F6FF6 /* Model */,
+				FA205DB8279AC4F9009304FA /* Protocols */,
 			);
 			path = FavoritesModule;
 			sourceTree = "<group>";
@@ -915,6 +931,7 @@
 		FADA95CA27980F15006F6FF6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FA205DB6279AC4D1009304FA /* FavoritesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1244,10 +1261,12 @@
 				FAA0E755277EC8F700230863 /* TeamPresenterInputDelegate.swift in Sources */,
 				FAB2F8E7277C6B44006ECC1D /* TeamPresenter.swift in Sources */,
 				FAA60EE0278C501A00E1FC54 /* PlayerRosterPresenterOutputDelegate.swift in Sources */,
+				FA205DBA279AC520009304FA /* FavoritesPresenterInputDelegate.swift in Sources */,
 				FACBD66527845CE20015B65D /* UITableViewCell+Extension.swift in Sources */,
 				FA75A7B02783196B000FB307 /* GameViewController.swift in Sources */,
 				FAB2F8BC277C40C8006ECC1D /* AppFont.swift in Sources */,
 				FAA0E75A277EC9BA00230863 /* DetailedTeamPresenterInputDelegate.swift in Sources */,
+				FA205DBC279AC541009304FA /* FavoritesPresenterOutputDelegate.swift in Sources */,
 				FAA60ED7278C354700E1FC54 /* PlayerRosterView.swift in Sources */,
 				FAB2F8CB277C4CE1006ECC1D /* AppURL.swift in Sources */,
 				FA52C8F1278605140054F92D /* AFNetworkDataFetcher.swift in Sources */,
@@ -1272,6 +1291,7 @@
 				FADA95CE27980F72006F6FF6 /* FavoritesView.swift in Sources */,
 				FADA95D1279810AB006F6FF6 /* Favorite.swift in Sources */,
 				FAA804202787107C001F9E6B /* PlayersByTeamCell.swift in Sources */,
+				FA205DB7279AC4D1009304FA /* FavoritesPresenter.swift in Sources */,
 				FAB2F876277C3616006ECC1D /* SceneDelegate.swift in Sources */,
 				FA6B97552791A30300912888 /* HostStatsCell.swift in Sources */,
 				FA0D9712278DB42D00EC9C02 /* LoadableGameIDAlertController.swift in Sources */,

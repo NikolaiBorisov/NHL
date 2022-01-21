@@ -19,7 +19,7 @@ class TeamViewPresenterTest: XCTestCase {
     
     func testGetData() {
         
-        presenter.getDataWithDataFetcher()
+        presenter.getDataWithAF()
         
         XCTAssertTrue(viewMock.isStart)
         XCTAssertTrue(viewMock.isStop)
@@ -33,6 +33,7 @@ class TeamViewPresenterTest: XCTestCase {
 }
 
 final class TeamViewMock: TeamPresenterInputDelegate {
+    
     var isStart = false
     var isStop = false
     var isEndRefreshing = false
@@ -45,35 +46,40 @@ final class TeamViewMock: TeamPresenterInputDelegate {
         self.isLabelSet = true
     }
     
-    func showNextVCWith(model: DetailedTeamModel) {
-        self.isNextVCShown = true
+    func presentErrorAlertWith(title: String, message: AppError) {
+        self.isAlertShown = true
     }
     
-    func presentErrorAlertWith(title: String, message: AppError) {
-        isAlertShown = true
+    func showNextVCWith(team: DetailedTeamScreenModelProtocol) {
+        self.isNextVCShown = true
     }
     
     func startAnimating() {
         self.isStart = true
     }
+    
     func stopAnimating() {
         self.isStop = true
     }
+    
     func endRefreshing() {
         self.isEndRefreshing = true
     }
+    
     func reloadView(_ teams: NHLDTO) {
         self.isReload = true
     }
+    
 }
 
 final class TeamPresenterMock: TeamPresenterOutputDelegate {
+    
     var delegate: TeamPresenterInputDelegate?
     var dataFetcherService = DataFetcherServiceMock()
     
-    func getDataWithDataFetcher() {
+    func getDataWithAF() {
         delegate?.startAnimating()
-        dataFetcherService.fetchTeamData { [weak self] result in
+        dataFetcherService.fetchTeams { [weak self] result in
             switch result {
             case .success:
                 guard let delegate = self?.delegate else { return }
@@ -88,33 +94,20 @@ final class TeamPresenterMock: TeamPresenterOutputDelegate {
         }
     }
     
-    func getDataWithAF() {}
-    
-    func didTapOn(team: Team, with icon: UIImage?) {
-        let model = DetailedTeamModel(
-            title: "",
-            icon: icon,
-            fullName: "",
-            city: "",
-            timeZone: "",
-            abbreviation: "",
-            firstYearOfPlay: "",
-            division: "",
-            conference: "",
-            venue: "",
-            officialSite: "",
-            numberOfRows: 1
-        )
-        delegate?.showNextVCWith(model: model)
+    func didTapOn(team: DetailedTeamScreenModelProtocol) {
+        delegate?.showNextVCWith(team: team)
     }
     
 }
 
-final class DataFetcherServiceMock: DataFetcherServiceProtocol {
+final class DataFetcherServiceMock: AFDataFetcherServiceProtocol {
     
-    func fetchTeamData(completion: @escaping (Result<NHLDTO?, AppError>) -> Void) {
+    func fetchTeams(completion: @escaping (Result<NHLDTO?, Error>) -> Void) {
         completion(.success(NHLDTO(copyright: "", teams: [])))
-        completion(.failure(.noInternetConnection))
+        completion(.failure(AppError.noData))
     }
+    
+    func fetchPlayerInfo(for id: Int, completion: @escaping (Result<PlayerDTO?, Error>) -> Void) {}
+    func fetchGameInfo(for id: Int, completion: @escaping (Result<GameDTO?, Error>) -> Void) {}
     
 }

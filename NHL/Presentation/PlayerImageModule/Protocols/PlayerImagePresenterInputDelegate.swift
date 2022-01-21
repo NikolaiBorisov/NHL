@@ -5,7 +5,6 @@
 //  Created by NIKOLAI BORISOV on 18.01.2022.
 //
 
-import Foundation
 import UIKit
 
 protocol PlayerImagePresenterInputDelegate: AnyObject {
